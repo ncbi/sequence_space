@@ -1,0 +1,38 @@
+Note that this code was built to make predictions of NusG sequences only.  Attempting to use it on other protein sequences will yield erronous results.  
+  
+This code cannot run without the following dependencies:
+
+hmmer-2.3.2: http://hmmer.org/download.html
+mview-1.67: https://sourceforge.net/projects/bio-mview/files/bio-mview/mview-1.67/
+blast 2.2.26: https://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/
+jnet_src_v.2.3.1: https://www.compbio.dundee.ac.uk/jpred/about.shtml
+python3: https://www.python.org/downloads/
+
+python3 packages required to run code:
+matplotlib
+pandas numpy
+biopython
+networkx
+scikit-learn
+
+For the code to run properly:  
+-> $WDIR must be defined in jpred_pipeline_updated.sh as the directory containing all scripts and data
+-> The two data directories (CTDs_40_jpred.tgz CTDs_40_uniprot90.tgz) must be unpacked within $WDIR.  They contain all results for the 10 experimentally  
+   validated variants described in the paper
+-> hmmer must be compiled, and the executables must be installed in a hmmer-2.3.2/src directory $WDIR.  
+   Alternatively, hmmer can be installed anywhere, and its location can be updated in jpred_pipeline_updated.sh.  
+-> mview must be compiled and its executable must be installed within $WDIR
+-> jnet (the JPred algorithm) must be compiled and saved in jnet_src_v.2.3.1 within $WDIR  
+-> python3 and all specified packages must be installed  
+
+To analyze the JPred results within the 2 data directories, collate_preds_final.py can be run separately on the data as follows:
+
+ls -d $PWD/CTDs_40_jpred/* > outfiles.txt  
+./collate_preds_final.py outfiles.txt results  
+
+Once all of these conditions have been met, the entire pipeline can be run with ./run_preds.sh  
+***NOTE THAT USING ./run_preds.sh INCORRECTLY WILL OVERWRITE THE DATA.  IT IS RECOMMENDED TO MAKE BACK-UP FILES OF THE DATA FOR THIS REASON***
+To learn about scripts and their functions, look at jpred_pipeline_updated.sh.  It runs JPred on PSI-BLAST-generated data.  
+collate_preds_final.py analyzes all JPred predictions, determines whether a sequence switches folds, and outputs all results to a user-specified outfile.  
+Usage: collate_preds_final.py <infile> <name of output csv>  
+
