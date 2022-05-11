@@ -25,14 +25,22 @@ For the code to run properly:
 -> jnet (the JPred algorithm) must be compiled and saved in jnet_src_v.2.3.1 within $WDIR  
 -> python3 and all specified packages must be installed  
 
+collate_preds_final.py analyzes all JPred predictions, determines whether a sequence switches folds, and outputs all results to a user-specified outfile.  
+Usage: collate_preds_final.py <infile> <name of output csv>  
+
 To analyze the JPred results within the 2 data directories, collate_preds_final.py can be run separately on the data as follows:
 
 ls -d $PWD/CTDs_40_jpred/* > outfiles.txt  
 ./collate_preds_final.py outfiles.txt results  
 
+The result.csv file should match results_reference.csv exactly.
+
+This run should take <30 seconds.
+
 Once all of these conditions have been met, the entire pipeline can be run with ./run_preds.sh  
 ***NOTE THAT USING ./run_preds.sh INCORRECTLY WILL OVERWRITE THE DATA.  IT IS RECOMMENDED TO MAKE BACK-UP FILES OF THE DATA FOR THIS REASON***
 To learn about scripts and their functions, look at jpred_pipeline_updated.sh.  It runs JPred on PSI-BLAST-generated data.  
-collate_preds_final.py analyzes all JPred predictions, determines whether a sequence switches folds, and outputs all results to a user-specified outfile.  
-Usage: collate_preds_final.py <infile> <name of output csv>  
+
+The entire run should take 0.5-1 hr on a home computer.
+
 
