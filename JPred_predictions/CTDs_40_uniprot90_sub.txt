@@ -1,0 +1,10 @@
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/A0A077QHU1
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/A0A0P1LTF1
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/A0A0S4NBF0
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/A0A1W1XWG8
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/A0A2J6WKD6
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/B3EDK9
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/E8N6B2
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/Q0TAL4
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/Q9F769
+/data/porterll/sequence_space/code/CTDs_40_uniprot90/UPI000E4E22B5
