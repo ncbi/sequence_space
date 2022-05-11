@@ -15,4 +15,19 @@ pandas
 numpy  
 biopython  
 networkx  
-scikit-learn  
+scikit-learn 
+
+Typical install time: 30 minutes-1 hour.
+
+Note that PSI-BLAST was run on sequences with the following command:  
+psiblast -db database -num_iterations 3 -num_alignments 10000 -num_threads 16 -query ID/ID.fasta -out ID/ID.bla7 -evalue 0.05 -outfmt "7 qaccver saccver pident length mismatch gapopen qstart qend sstart send evalue bitscore qseq sseq staxid sscinames" -out_ascii_pssm ID/ID.pssm  
+
+databases were either uniref90: https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2020_06/uniref/
+or jpred: https://www.compbio.dundee.ac.uk/jpred/about_RETR_JNetv231_details.shtml
+
+Structure of data to be analyzed: DataDirectory/UniprotID/UniprotID.fa  
+Each sequence from Uniprot has its own folder, named by Uniprot ID.  Within that folder, its sequence is saved in fasta (.fa) format, with named by  
+Uniprot ID
+
+Pipeline with all code was tested on Linux RHEL/CentOS6
+collate_preds_final.py was also tested on macOS Catalina 10.15.7
