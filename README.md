@@ -5,7 +5,7 @@ JPred_predictions contains code used to make fold-switch predictions.  Dependenc
 
 hmmer-2.3.2: http://hmmer.org/download.html
 mview-1.67: https://sourceforge.net/projects/bio-mview/files/bio-mview/mview-1.67/
-blast 2.2.26: https://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/
+blast 2.2.26: https://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/ 
 jnet_src_v.2.3.1: https://www.compbio.dundee.ac.uk/jpred/about.shtml
 python3: https://www.python.org/downloads/
 
