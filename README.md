@@ -1,5 +1,5 @@
 # sequence_space
-Code and data from "Many dissimilar protein domains switch between alpha-helix and beta-sheet folds"
+Code and data from "Many dissimilar NusG protein domains switch between alpha-helix and beta-sheet folds"
 
 JPred_predictions contains code used to make fold-switch predictions.  Dependencies:
 
